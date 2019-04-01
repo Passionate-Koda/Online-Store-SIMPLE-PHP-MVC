@@ -79,7 +79,7 @@ if(isset($_SESSION['id'])){
                 <td><p class="total"> <?php echo '$'.($rowBook['price'] * $row['quantity']) ?> </p></td>
                 <td>
 
-                  <?php include 'update.php'; ?>
+                 <?php include 'update.php'; ?>
 
                 </td>
                 <td>

@@ -2,7 +2,7 @@
 $uri = explode("/", $_SERVER['REQUEST_URI']);
 //var_dump($uri);
 
-if(count($uri) > 2){
+if(count($uri)> 2){
   header("Location:/admin_home");
 }
 
@@ -36,6 +36,18 @@ $cart_id = NULL;
 if(isset($_GET['cart_id'])){
   $cart_id = $_GET['cart_id'];
 }
+$p = NULL;
+if(isset($_GET['p'])){
+  $p = $_GET['p'];
+}
+$s = NULL;
+if(isset($_GET['s'])){
+  $s = $_GET['s'];
+}
+$cat_id = NULL;
+if(isset($_GET['cat_id'])){
+  $cat_id = $_GET['cat_id'];
+}
 
 
 
@@ -60,14 +72,6 @@ switch ($uri[1]) {
 
   case "admin_register":
   include APP_PATH."/views/admin/register.php";
-  break;
-
-  case "style":
-  include APP_PATH."/views/admin/style/styles.css";
-  break;
-
-  case "style2":
-  include APP_PATH."/views/public/styles/styles.css";
   break;
 
   case "admin_home":
@@ -181,6 +185,10 @@ switch ($uri[1]) {
   break;
 
   case "catalogue?id=$category_id&name=$category_name":
+  include APP_PATH."/views/public/catalogue.php";
+  break;
+
+  case "catalogue?p=$p&s=$s&cat_id=$cat_id":
   include APP_PATH."/views/public/catalogue.php";
   break;
 

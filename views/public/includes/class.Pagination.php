@@ -14,7 +14,7 @@ class Pagination{
     $stmt = $dbconn->prepare("SELECT * FROM book WHERE category_id=:id LIMIT $this->offset, $this->bookPerPage");
 
     $stmt->bindParam(':id', $catid);
-    
+
     $stmt->execute();
     return $stmt;
   }

@@ -14,9 +14,7 @@ function doesEmailExist($dbconn, $input){ #placeholders are just there
 
 function doAdminRegister($dbconn, $input){
   $hash = password_hash($input['password'], PASSWORD_BCRYPT);
-
   #insert data
-
   $stmt = $dbconn->prepare("INSERT INTO admin(firstname,lastname,email,hash) VALUES(:fn, :ln, :e, :h)");
 
   #bind params...
@@ -199,11 +197,9 @@ function getCategoryById($dbconn,$get){
 
 
   return $category_name;
-
-
-
-
 }
+
+
 
 
 function getProductNameById($dbconn,$get){

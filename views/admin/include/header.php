@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title><?php echo $page_title ?></title>
-	<link rel="stylesheet" type="text/css" href="style">
+	<link rel="stylesheet" type="text/css" href="admin_style/styles.css">
 </head>
 <body>
 	<section>

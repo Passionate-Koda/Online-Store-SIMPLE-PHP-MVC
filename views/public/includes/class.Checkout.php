@@ -6,7 +6,7 @@ class Checkout {
   private $quantity;
   private $tq = 0; //total Quantity
 
-  
+
   # Method To Get Price From Book Table
   private function GetItemPrice($dbconn, $bkid){
     $stmt = $dbconn->prepare("SELECT * FROM book WHERE book_id = :bi");

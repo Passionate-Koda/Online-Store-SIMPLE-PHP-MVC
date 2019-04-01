@@ -54,11 +54,9 @@ include 'category.php';
 			}
 
 			$stmt = $conn->prepare("SELECT * FROM book WHERE category=:id LIMIT :start, 2");
-
 			$stmt->bindParam(':id', $catID);
 			$j = (int)$start;
 			$stmt->bindParam(':start', $j, PDO::PARAM_INT);
-
 			$stmt->execute();
 
 			// $stmt = $paginate->query($conn, $catID, $page);
